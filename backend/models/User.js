@@ -14,6 +14,9 @@ var userSchema = new mongoose.Schema({
     isVerified: {
         type: Boolean,
         default: false
+    },
+    verif_code: {
+        type: String
     }
 },
 {timestamps: true},
