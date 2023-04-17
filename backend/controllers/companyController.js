@@ -1,4 +1,4 @@
-const companyModel = require("../models/company");
+const companyModel = require("../models/Company");
 const bcrypt = require("bcrypt");
 const { randomBytes } = require("crypto");
 const sendEmail = require("./nodemailer");
