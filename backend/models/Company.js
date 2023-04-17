@@ -6,6 +6,9 @@ var companySchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    description:{
+        type:String,
+    },
     phoneNumber:{
         type:String,
         required:true,
