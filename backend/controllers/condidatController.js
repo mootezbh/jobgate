@@ -9,13 +9,16 @@ module.exports = {
       req.body["picture"] = req.files.image[0].filename;
     }
     try {
+      const { recommender, ...everything } = req.body;
       hashedPwd = bcrypt.hashSync(req.body.password, 10);
       console.log(hashedPwd);
       const newCondidat = new condidatModel({
-        ...req.body,
+        ...everything,
         password: hashedPwd,
         verif_code: randomBytes(6).toString("hex"),
       });
+      console.log(recommender);
+      newCondidat.recommender.push(recommender);
       await newCondidat.save(req.body, (err, item) => {
         if (err) {
           res.status(400).json({

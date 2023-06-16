@@ -121,5 +121,8 @@ module.exports = {
                 message: "failed to search company",
             });
         }
+    },
+    getOffers: async (req, res) => {
+        
     }
 }

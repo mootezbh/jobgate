@@ -29,7 +29,10 @@ var condidatSchema = new mongoose.Schema({
     level: {
         type: String,
     },
-    //recommender
+    recommender: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Condidat",
+    }]
 });
 
 user.discriminator("Condidat",condidatSchema);

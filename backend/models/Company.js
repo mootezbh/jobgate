@@ -1,10 +1,11 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require('mongoose');
 const user = require("./User");
 
 var companySchema = new mongoose.Schema({
     companyName:{
         type:String,
         required:true,
+        unique:true,
     },
     description:{
         type:String,
@@ -19,8 +20,13 @@ var companySchema = new mongoose.Schema({
         required:true,
     },
     isValidated:{
-        type: Boolean
-    }
+        type: Boolean,
+        default: false
+    },
+    jobs:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Job",
+    }]
 });
 
 user.discriminator("Company",companySchema);

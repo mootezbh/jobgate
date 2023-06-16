@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require('mongoose'); 
 const user = require("./User");
 
 var adminSchema = new mongoose.Schema({

@@ -552,7 +552,7 @@
 											"top": 423,
 											"width": 144.16162109375,
 											"height": 13,
-											"text": "+getOffers()",
+											"text": "+getJobs()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1794,7 +1794,7 @@
 											"top": 575,
 											"width": 135.484375,
 											"height": 13,
-											"text": "Offer"
+											"text": "Job"
 										},
 										{
 											"_type": "LabelView",
@@ -2002,7 +2002,7 @@
 											"top": 711,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+addOffer()",
+											"text": "+addJob()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2019,7 +2019,7 @@
 											"top": 726,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+getAllOffer()",
+											"text": "+getAllJobs()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2036,7 +2036,7 @@
 											"top": 741,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+getOffer()",
+											"text": "+getJob()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2053,7 +2053,7 @@
 											"top": 756,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+updateOffer()",
+											"text": "+updateJob()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2070,7 +2070,7 @@
 											"top": 771,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+deleteOffer()",
+											"text": "+deleteJob()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2104,7 +2104,7 @@
 											"top": 801,
 											"width": 135.484375,
 											"height": 13,
-											"text": "+searchOffer()",
+											"text": "+searchJob()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2708,7 +2708,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 719,
+									"left": 727,
 									"top": 704,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2729,7 +2729,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 719,
+									"left": 727,
 									"top": 719,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2750,7 +2750,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 720,
+									"left": 728,
 									"top": 675,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -2771,8 +2771,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 739,
-									"top": 407,
+									"left": 741,
+									"top": 406,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -2792,7 +2792,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 752,
+									"left": 754,
 									"top": 409,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -2813,7 +2813,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 712,
+									"left": 713,
 									"top": 402,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -2920,7 +2920,7 @@
 								"$ref": "AAAAAAGHc2DaZW/QORA="
 							},
 							"lineStyle": 1,
-							"points": "725:387;720:696;537:694",
+							"points": "726:387;728:696;537:694",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGHdNWdNlCur/A="
@@ -3928,7 +3928,7 @@
 											"top": 888,
 											"width": 118.8662109375,
 											"height": 13,
-											"text": "+offer: Offer",
+											"text": "+offer: Job",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4298,9 +4298,9 @@
 										"$ref": "AAAAAAGHdN9xU9/X6wo="
 									},
 									"font": "Arial;13;0",
-									"left": 612,
+									"left": 611,
 									"top": 852,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -4807,13 +4807,30 @@
 											"height": 13,
 											"text": "+searchCondidat()",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGIZz7sc+wN5nQ=",
+											"_parent": {
+												"$ref": "AAAAAAGHdOES+OqFz0M="
+											},
+											"model": {
+												"$ref": "AAAAAAGIZz7sRuv4EUE="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 1413,
+											"width": 147.0498046875,
+											"height": 13,
+											"text": "+searchCompany()",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 624,
 									"top": 1273,
 									"width": 157.0498046875,
-									"height": 143
+									"height": 158
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4853,7 +4870,7 @@
 							"left": 624,
 							"top": 1120,
 							"width": 157.0498046875,
-							"height": 296,
+							"height": 311,
 							"nameCompartment": {
 								"$ref": "AAAAAAGHdOES+Op/AEU="
 							},
@@ -4891,8 +4908,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 430,
-									"top": 1277,
+									"left": 429,
+									"top": 1280,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -4912,8 +4929,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 430,
-									"top": 1292,
+									"left": 429,
+									"top": 1295,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -4933,8 +4950,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 429,
-									"top": 1248,
+									"left": 430,
+									"top": 1251,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -4952,7 +4969,7 @@
 								"$ref": "AAAAAAGHdOES+Op+zos="
 							},
 							"lineStyle": 1,
-							"points": "623:1268;238:1271",
+							"points": "623:1274;238:1271",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGHdOhdqosXADY="
@@ -5964,9 +5981,9 @@
 										"$ref": "AAAAAAGHdPOE6a7Ube0="
 									},
 									"font": "Arial;13;0",
-									"left": 373,
+									"left": 372,
 									"top": 1086,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -6328,7 +6345,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHcxBJf1ovx4c="
 							},
-							"name": "getOffers"
+							"name": "getJobs"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6597,7 +6614,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGHcwxWIFnMEAU="
 					},
-					"name": "Offer",
+					"name": "Job",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -6730,7 +6747,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "addOffer"
+							"name": "addJob"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6738,7 +6755,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "getAllOffer"
+							"name": "getAllJobs"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6746,7 +6763,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "getOffer"
+							"name": "getJob"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6754,7 +6771,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "updateOffer"
+							"name": "updateJob"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6762,7 +6779,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "deleteOffer"
+							"name": "deleteJob"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6778,7 +6795,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc1ed42V4418="
 							},
-							"name": "searchOffer"
+							"name": "searchJob"
 						}
 					]
 				},
@@ -7215,6 +7232,14 @@
 								"$ref": "AAAAAAGHdOES9+p8sBs="
 							},
 							"name": "searchCondidat"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGIZz7sRuv4EUE=",
+							"_parent": {
+								"$ref": "AAAAAAGHdOES9+p8sBs="
+							},
+							"name": "searchCompany"
 						}
 					]
 				},
@@ -7327,7 +7352,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGHdOrAaO/6Iv0="
 							},
-							"name": "level"
+							"name": "level",
+							"type": ""
 						}
 					]
 				},
