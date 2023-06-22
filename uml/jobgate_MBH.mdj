@@ -1550,7 +1550,7 @@
 											"top": 339,
 											"width": 127,
 											"height": 13,
-											"text": "+responses: string[*]",
+											"text": "+solutions: string[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1562,6 +1562,7 @@
 											"model": {
 												"$ref": "AAAAAAGHc0pEFGIitJ4="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 405,
 											"top": 354,
@@ -1575,7 +1576,7 @@
 									"left": 400,
 									"top": 289,
 									"width": 137,
-									"height": 83
+									"height": 68
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1598,7 +1599,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 377,
+											"top": 362,
 											"width": 127,
 											"height": 13,
 											"text": "+addQuestions()",
@@ -1615,7 +1616,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 392,
+											"top": 377,
 											"width": 127,
 											"height": 13,
 											"text": "+addResponses()",
@@ -1632,7 +1633,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 407,
+											"top": 392,
 											"width": 127,
 											"height": 13,
 											"text": "+calculScore()",
@@ -1649,7 +1650,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 422,
+											"top": 407,
 											"width": 127,
 											"height": 13,
 											"text": "+addTest()",
@@ -1666,7 +1667,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 437,
+											"top": 422,
 											"width": 127,
 											"height": 13,
 											"text": "+updateTest()",
@@ -1683,7 +1684,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 452,
+											"top": 437,
 											"width": 127,
 											"height": 13,
 											"text": "+deleteTest()",
@@ -1692,7 +1693,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 372,
+									"top": 357,
 									"width": 137,
 									"height": 98
 								},
@@ -6542,7 +6543,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGHc0OPg1/R/Q0="
 							},
-							"name": "responses",
+							"name": "solutions",
 							"type": "string",
 							"multiplicity": "*"
 						},
