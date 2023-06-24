@@ -7,6 +7,14 @@ var applicationSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    candidat: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Condidat",
+    },
+    job: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Job",
+    },
   },
   { timestamps: true }
 );
