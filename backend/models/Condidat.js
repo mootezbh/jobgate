@@ -29,12 +29,6 @@ var condidatSchema = new mongoose.Schema({
   level: {
     type: String,
   },
-  recommender: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Condidat",
-    },
-  ],
   applications: [
     {
       type: mongoose.Schema.Types.ObjectId,

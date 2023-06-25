@@ -2,6 +2,8 @@ const condidatModel = require("../models/Condidat");
 const bcrypt = require("bcrypt");
 const { randomBytes } = require("crypto");
 const sendEmail = require("./nodemailer");
+require("dotenv").config();
+
 module.exports = {
   add: async (req, res) => {
     if (req.files) {
@@ -9,26 +11,24 @@ module.exports = {
       req.body["picture"] = req.files.image[0].filename;
     }
     try {
-      const { recommender, ...everything } = req.body;
-      hashedPwd = bcrypt.hashSync(req.body.password, 10);
-      console.log(hashedPwd);
+      hashedPwd = bcrypt.hashSync(req.body.password, process.env.PASSWORD_SALT);
       const newCondidat = new condidatModel({
-        ...everything,
+        ...req.body,
         password: hashedPwd,
         verif_code: randomBytes(6).toString("hex"),
       });
-      console.log(recommender);
-      newCondidat.recommender.push(recommender);
       await newCondidat.save(req.body, (err, item) => {
         if (err) {
           res.status(400).json({
             success: false,
             message: "error creating condidat",
+            error: err,
           });
         } else {
           res.status(200).json({
             success: true,
             message: "Condidat created!",
+            data: item,
           });
           sendEmail(item.verif_code, item.email, item.firstName);
         }
@@ -38,6 +38,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed condidat",
+        error: error,
       });
     }
   },
@@ -53,6 +54,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed to get all condidat",
+        error: error,
       });
     }
   },
@@ -68,6 +70,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed to get one condidat",
+        error: error,
       });
     }
   },
@@ -79,12 +82,18 @@ module.exports = {
       if (req.files.image) {
         req.body["picture"] = req.files.image[0].filename;
       }
-      hashedPwd = bcrypt.hashSync(req.body.password, 10);
+      if (req.body.password) {
+        hashedPwd = bcrypt.hashSync(
+          req.body.password,
+          process.env.PASSWORD_SALT
+        );
+        req.body.password = hashedPwd;
+      }
+
       const condidat = await condidatModel.findByIdAndUpdate(
         req.params.id,
         {
           ...req.body,
-          password: hashedPwd,
         },
 
         { new: true }
@@ -98,6 +107,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed to update condidat",
+        error: error,
       });
     }
   },
@@ -113,6 +123,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed to delete condidat",
+        error: error,
       });
     }
   },
@@ -140,6 +151,7 @@ module.exports = {
       res.status(400).json({
         success: false,
         message: "failed to get condidat",
+        error: error,
       });
     }
   },

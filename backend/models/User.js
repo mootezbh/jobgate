@@ -1,6 +1,6 @@
-const mongoose = require("mongoose"); // Erase if already required
+const mongoose = require("mongoose");
 const options = { discriminatorKey: "itemtype" };
-// Declare the Schema of the Mongo model
+
 var userSchema = new mongoose.Schema(
   {
     email: {
