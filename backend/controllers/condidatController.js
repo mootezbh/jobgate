@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const { randomBytes } = require("crypto");
 const sendEmail = require("./nodemailer");
 require("dotenv").config();
-
 module.exports = {
   add: async (req, res) => {
     if (req.files) {
@@ -11,7 +10,7 @@ module.exports = {
       req.body["picture"] = req.files.image[0].filename;
     }
     try {
-      hashedPwd = bcrypt.hashSync(req.body.password, process.env.PASSWORD_SALT);
+      hashedPwd = bcrypt.hashSync(req.body.password, 10);
       const newCondidat = new condidatModel({
         ...req.body,
         password: hashedPwd,
@@ -156,4 +155,3 @@ module.exports = {
     }
   },
 };
-//HACK: test requests

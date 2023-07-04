@@ -131,20 +131,4 @@ module.exports = {
       });
     }
   },
-  getJobs: async (req, res) => {
-    try {
-      const company = await companyModel.findById(req.params.id);
-      res.status(200).json({
-        success: true,
-        data: company.jobs,
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(400).json({
-        success: false,
-        message: "failed to get jobs",
-        error: error,
-      });
-    }
-  },
 };

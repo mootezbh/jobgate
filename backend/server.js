@@ -17,3 +17,7 @@ app.use("/verify", verifyRouter);
 app.listen(3000, () => {
   console.log(`Server is Listening on ${PORT}`);
 });
+
+//FIXME: fix email template
+//HACK: test requests
+//TODO: finish controllers and routes
