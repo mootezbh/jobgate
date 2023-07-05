@@ -1,5 +1,5 @@
-const testModel = require("../models/testModel");
-const jobModel = require("../models/jobModel");
+const testModel = require("../models/Test");
+const jobModel = require("../models/Job");
 module.exports = {
   add: async (req, res) => {
     try {

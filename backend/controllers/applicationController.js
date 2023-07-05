@@ -1,6 +1,6 @@
-const condidatModel = require("../models/condidat");
-const jobModel = require("../models/job");
-const applicationModel = require("../models/application");
+const condidatModel = require("../models/Condidat");
+const jobModel = require("../models/Job");
+const applicationModel = require("../models/Application");
 module.exports = {
   //add an application
   add: async (req, res) => {
