@@ -1,9 +1,9 @@
 const User = require("../models/User");
 const { join } = require("path");
 const route = require("express").Router();
-route.post("/:token", async (req, res) => {
+route.get("/", async (req, res) => {
   try {
-    const user = await User.findOne({ verif_code: req.params.token });
+    const user = await User.findOne({ verif_code: req.query.token });
     user.isVerified = true;
     user.verif_code = undefined;
     user.save();

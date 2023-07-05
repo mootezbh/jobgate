@@ -82,10 +82,7 @@ module.exports = {
         req.body["picture"] = req.files.image[0].filename;
       }
       if (req.body.password) {
-        hashedPwd = bcrypt.hashSync(
-          req.body.password,
-          process.env.PASSWORD_SALT
-        );
+        hashedPwd = bcrypt.hashSync(req.body.password, 10);
         req.body.password = hashedPwd;
       }
 

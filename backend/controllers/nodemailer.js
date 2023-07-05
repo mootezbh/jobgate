@@ -19,7 +19,9 @@ var transport = nodemailer.createTransport({
 });
 
 function sendEmail(token, mail, name) {
-  const htmlToSend = template({ URL: `http://localhost:3000/verify/${token}` });
+  const htmlToSend = template({
+    URL: `http://localhost:3000/verify?token=${token}`,
+  });
   const mailOptions = {
     from: "test@jobgate.com",
     to: mail,

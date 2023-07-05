@@ -8,7 +8,7 @@ module.exports = {
       const applicationData = req.body;
       const newApplication = new applicationModel(applicationData);
       const savedApplication = await newApplication.save();
-      await jobModel.findByIdAndUpdate(req.body.jobId, {
+      await jobModel.findByIdAndUpdate(req.body.job, {
         $push: {
           applications: savedApplication._id,
         },
