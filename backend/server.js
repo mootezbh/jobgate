@@ -1,7 +1,7 @@
 const express = require("express");
 const config = require("./config.js");
 const condidatRouter = require("./routes/condidatRouter");
-const verifyRouter = require("./routes/verifyRouter");
+const verifyaccountRouter = require("./routes/verifyaccountRouter");
 const companyRouter = require("./routes/companyRouter");
 const jobRouter = require("./routes/jobRouter");
 const testRouter = require("./routes/testRouter");
@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 app.use("/condidat", condidatRouter);
 app.use("/company", companyRouter);
 app.use("/job", jobRouter);
-app.use("/verify", verifyRouter);
+app.use("/verify", verifyaccountRouter);
 app.use("/test", testRouter);
 app.use("/application", applicationRouter);
 app.use("/category", categoryRouter);

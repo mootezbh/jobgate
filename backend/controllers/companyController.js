@@ -6,6 +6,9 @@ require("dotenv").config();
 module.exports = {
   add: async (req, res) => {
     try {
+      if (req.files) {
+        req.body["picture"] = req.files.image[0].filename;
+      }
       hashedPwd = bcrypt.hashSync(req.body.password, process.env.PASSWORD_SALT);
       const newCompany = new companyModel({
         ...req.body,

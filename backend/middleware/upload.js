@@ -2,6 +2,9 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
+    if (file.mimetype == "application/pdf") {
+      cb(null, "uploads/pdf");
+    }
     cb(null, "uploads");
   },
   filename: (req, file, cb) => {

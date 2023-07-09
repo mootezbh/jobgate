@@ -20,6 +20,9 @@ var companySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    picture: {
+      type: String,
+    },
     isValidated: {
       type: Boolean,
       default: false,
